@@ -10,5 +10,7 @@ As an instance,
 
     Python check_url_format.py -i THE/PATH/TO/YOUR/INPUT/FILE -o THE/PATH/TO/YOUR/OUTPUT/FILE
 
-The content of input file should be one url you wanna check in one line. For example, https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md
-And the content of output file is url with corresponding tag in one line. The tag is 'Normal' for normal format and 'Error' for abnormal format. And the delimiter is '\t'. For example, https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md /t Normal.
+The content of input file should be one url you wanna check in one line. For example, 
+> https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md
+And the content of output file is url with corresponding tag in one line. The tag is 'Normal' for normal format and 'Error' for abnormal format. And the delimiter is '\t'. For example, 
+> https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md /t Normal.
