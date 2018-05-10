@@ -13,4 +13,6 @@ Thirdly, run the following command to get performance results.
 
 	kernprof -l -v timing_functions.py
 
- 
+
+The result looks like as following:
+![image](https://github.com/AxsPlayer/Tool_toolkit/tree/master/Tool_Python-code-performance/images/kernprof_line_profiler.png)
