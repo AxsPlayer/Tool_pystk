@@ -20,21 +20,36 @@ def convert_to_num(ip_address):
 
     :return: The 32-bit number converted from ip address.
     """
-    # Iterate through ip once and split ip into four parts.
-    ip_parts = ip_address.split('.')
-    # Check ip address is legal or not.
-    if len(ip_parts) != 4:
+    # Iterate through ip.
+    number = 0
+    part_num = 0
+    part_str = ''
+    for i in xrange(len(ip_address)):
+        num = len(ip_address) - i - 1
+        if ip_address[num] == '.' or num == 0:
+            if num == 0:
+                part_str = ip_address[num] + part_str
+            if len(part_str.strip()) > 4:
+                logging.error('The ip address %s has wrong length in some parts.\n' % ip_address)
+                return 'Error'
+            try:
+                # Add number.
+                number = number + int(part_str.strip()) * 2**(part_num * 8)
+            except ValueError as e:
+                logging.error('The ip address %s is in error: %s.\n' % (ip_address, str(e)))
+                return 'Error'
+            if int(part_str.strip()) > 255 or int(part_str.strip()) < 0:
+                logging.error('The ip address %s has abnormal number out of bound 0~255.\n' % ip_address)
+                return 'Error'
+            part_num += 1
+            part_str = ''
+        else:
+            part_str = ip_address[num] + part_str
+
+    # Check part number.
+    if part_num != 4:
         logging.error('The ip address %s is in wrong length.\n' % ip_address)
         return 'Error'
-
-    # Loop through ip list and convert into integer.
-    number = 0
-    for i in xrange(len(ip_parts)):
-        try:
-            number = number + int(ip_parts[i].strip()) * 2**((len(ip_parts) - i - 1) * 8)
-        except ValueError as e:
-            logging.error('The ip address %s is in error: %s.\n' % (ip_address, str(e)))
-            return 'Error'
 
     return number
 
