@@ -1,5 +1,5 @@
 # Normal Url's Format Inspector
-This Tool is designed to inspect the format of url whether it's normal or not.
+This Tool is designed to inspect the format of url whether it's normal or not using Regular Expression.
 
 ## Why this tool?
 In some situation, you need to filter out or crawl URLs which are in normal format. In other word, you don't want any abnormal urls to disturb your tasks. Then it's the tool for you to filter out what you really need.
@@ -14,5 +14,5 @@ The content of input file should be one url you wanna check in one line. For exa
 > https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md
 
 And the content of output file is url with corresponding tag in one line. The tag is 'Normal' for normal format and 'Error' for abnormal format. And the delimiter is '\t'. For example, 
-> https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md /t Normal.
+> https://github.com/AxsPlayer/Tool_toolkit/edit/master/Tool_check-url-format/README.md \t Normal.
 
