@@ -1,18 +1,9 @@
-# Target/Motivation?
-In Python scripts, ususally some lines of code cost most of running time, and what you want to do with code performance is to find the most time-consuming part of code and to optimize the performance.
-The target of this tool is to help you find the 'evil'.
+## Motivation.
+In some situation, you have trained the Tensorflow model and save model file in .pb format. However, in other situations, the necessary model file format is .ckpt. Thus, this project is designed to help you convert .pb model file into .ckpt model file.
 
-## How to use.
-Firstly, install the necessary packages.
+## Usage.
+Modify the pb_file_path and ckpt_file_path in the script.
 
-	pip install line_profiler
+Then, run the following script to start converting.
 
-Secondly, add decorator **@profile** before the target function.
-
-Thirdly, run the following command to get performance results.
-
-	kernprof -l -v timing_functions.py
-
-The result looks like as following:
-
-![result](https://github.com/AxsPlayer/Tool_toolkit/tree/master/Tool_Python-code-performance/images/kernprof_line_profiler.png)
+	python convert_pb2ckpt.py 
