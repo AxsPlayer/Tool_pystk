@@ -24,22 +24,8 @@ URL = "https://github.com/{0}/{1}".format(GITHUB_USERNAME, repository_name)  # P
 github_release_tag = str(date.today())  # Use todays date as GitHub release tag
 DOWNLOAD_URL = "https://github.com/{0}/{1}/tarball/{2}".format(
     GITHUB_USERNAME, repository_name, github_release_tag)  # Source code download url
-PLATFORMS = ["Windows", "MacOS", "Unix"]
-CLASSIFIERS = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Natural Language :: English",
-    "Operating System :: Microsoft :: Windows",
-    "Operating System :: MacOS",
-    "Operating System :: Unix",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.3",
-    "Programming Language :: Python :: 3.4",
-]
+CLASSIFIERS = []
+# PLATFORMS = ["Windows", "MacOS", "Unix"]
 
 # Automatically generate setup parameters
 # Short description.
@@ -50,7 +36,7 @@ except:
     SHORT_DESCRIPTION = "No short description!"
 # Long description.
 try:
-    LONG_DESCRIPTION = open("README.rst", "rb").read().decode("utf-8")
+    LONG_DESCRIPTION = open("README.md", "rb").read().decode("utf-8")  # README.rst???
 except:
     LONG_DESCRIPTION = "No long description!"
 # License.
@@ -84,7 +70,7 @@ setup(
     url=URL,
     download_url=DOWNLOAD_URL,
     classifiers=CLASSIFIERS,
-    platforms=PLATFORMS,
+    # platforms=PLATFORMS,
     license=LICENSE,
     install_requires=REQUIRES,
 )
@@ -135,4 +121,22 @@ Frequent used classifiers List = [
     "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3 :: Only",
 ]
+
+
+CLASSIFIERS = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.3",
+    "Programming Language :: Python :: 3.4",
+]
+
 """
