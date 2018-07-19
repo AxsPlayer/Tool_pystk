@@ -1,5 +1,6 @@
-# pytk
+# pystk
 Small tools in toolkit to deal with piece of cakes in daily life, such as small tool to check normal url format.
+'pystk' represents for Python Small Toolkit.
 
 ## Motivation?
 In daily work, there are always bunch of need for small tools to deal with tiny problems. You can search using Google and write scripts for them. However, it's also time-consuming after multiple times for one small task, for the reason you should create tools again and again. Then the toolkit is designed to alleviate this problem.
