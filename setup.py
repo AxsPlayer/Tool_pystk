@@ -9,7 +9,7 @@ from setuptools import setup
 
 # Define project dependent variable.
 # -----------------------------------------
-NAME = "pytk"  # Your package name
+NAME = "pystk"  # Your package name
 GITHUB_USERNAME = "AxsPlayer"  # Your GitHub user name
 VERSION = __import__(NAME).__version__  # Version of package.
 AUTHOR = "AxsPlayer"
