@@ -61,7 +61,7 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
         return frozen_graph
 
 
-def main():
+def convert_model():
     """The main function to convert Keras model into TensorFlow model.
 
     :return: Write the TensorFlow model into .pb file.
