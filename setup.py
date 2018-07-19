@@ -16,6 +16,7 @@ AUTHOR = "AxsPlayer"
 AUTHOR_EMAIL = "axsplyer@126.com"
 MAINTAINER = "AxsPlayer"
 MAINTAINER_EMAIL = "axsplyer@126.com"
+LONG_DESCRIPTION_CONTENT_TYPE = "text/markdown"
 PACKAGES = [NAME] + ["%s.%s" % (NAME, i) for i in find_packages(NAME)]  # Include all sub packages in package directory.
 INCLUDE_PACKAGE_DATA = True  # Include everything in package directory.
 PACKAGE_DATA = {"": ["*.*"], }
@@ -24,7 +25,9 @@ URL = "https://github.com/{0}/{1}".format(GITHUB_USERNAME, repository_name)  # P
 github_release_tag = str(date.today())  # Use todays date as GitHub release tag
 DOWNLOAD_URL = "https://github.com/{0}/{1}/tarball/{2}".format(
     GITHUB_USERNAME, repository_name, github_release_tag)  # Source code download url
-CLASSIFIERS = []
+CLASSIFIERS = ['License :: OSI Approved :: Apache Software License',
+               'Programming Language :: Python :: 2.7']
+PYTHON_REQUIRES = '>=2.6, !=3.*'
 # PLATFORMS = ["Windows", "MacOS", "Unix"]
 
 # Automatically generate setup parameters
@@ -59,6 +62,7 @@ setup(
     name=NAME,
     description=SHORT_DESCRIPTION,
     long_description=LONG_DESCRIPTION,
+    long_description_content_type=LONG_DESCRIPTION_CONTENT_TYPE,
     version=VERSION,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
@@ -73,6 +77,7 @@ setup(
     # platforms=PLATFORMS,
     license=LICENSE,
     install_requires=REQUIRES,
+    python_requires=PYTHON_REQUIRES,
 )
 
 """
