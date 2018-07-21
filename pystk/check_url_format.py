@@ -1,16 +1,5 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
-################################################################################
-#
-# Copyright (c) 2018 Personal. All Rights Reserved
-#
-################################################################################
-"""
-Python code to check normal url format.
-
-Authors: AxsPlayer
-Date: 2018/04/27 12:49:06
-"""
 import argparse
 import logging
 import re
@@ -47,6 +36,10 @@ def check_url_format(url):
         return 'Normal'
     else:
         return 'Error'
+
+
+def detect_abnormal_url():
+
 
 
 def main():
