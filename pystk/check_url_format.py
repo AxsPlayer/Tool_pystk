@@ -38,8 +38,20 @@ def check_url_format(url):
         return 'Error'
 
 
-def detect_abnormal_url():
+def detect_abnormal_url(dataframe, column_name):
+    """Check the pattern of urls.
 
+    Given column name of urls, check urls' pattern and return column of results.
+
+    :param dataframe: The input dataframe in pandas.
+    :param column_name: The column name of target urls, which should be converted.
+
+    :return: The new dataframe with attached result column, consisting of 'Normal' or 'Error'.
+    """
+    # Check patterns of urls whether they are normal or error.
+    dataframe['url_pattern'] = dataframe[column_name].apply(check_url_format, axis=0)
+    
+    return dataframe
 
 
 def main():
