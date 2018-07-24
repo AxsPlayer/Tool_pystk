@@ -50,7 +50,7 @@ def detect_abnormal_url(dataframe, column_name):
     """
     # Check patterns of urls whether they are normal or error.
     dataframe['url_pattern'] = dataframe[column_name].apply(check_url_format, axis=0)
-    
+
     return dataframe
 
 

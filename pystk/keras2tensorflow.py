@@ -61,7 +61,33 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
         return frozen_graph
 
 
-def convert_model():
+def convert_model(input_file_path, target_fold, target_file_name):
+    """Convert Keras .h5 model file into Tensorflow .pb model file.
+
+    Freeze session and convert Keras model into Tensorflow model.
+
+    :param input_file_path: The input file path of Keras model file, in .h5.
+    :param target_fold: The target fold where the Tensorflow model file is saved in.
+    :param target_file_name: The output file name of Tensorflow model file, in .pb.
+
+    :return: None. The output file has been written in function.
+    """
+    # Load Keras model.
+    K.set_learning_phase(0)
+    net_model = load_model(input_file_path)
+    # Record input and output nodes' names.
+    logging.info('The input node name is : %s, and the output node name is : %s' %
+                 (net_model.input.name, net_model.output.name))
+
+    # Create session and freeze graph, then save frozen graph into model file.
+    output_fold = target_fold + '/tensorflow_model/'
+    frozen_graph = freeze_session(K.get_session(), output_names=[net_model.output.op.name])
+    graph_io.write_graph(frozen_graph, output_fold, target_file_name, as_text=False)
+    logging.info('Saved the constant graph (ready for inference) at %s' %
+                 osp.join(output_fold, target_file_name))
+
+
+def main():
     """The main function to convert Keras model into TensorFlow model.
 
     :return: Write the TensorFlow model into .pb file.
