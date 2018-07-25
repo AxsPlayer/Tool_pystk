@@ -22,7 +22,7 @@ Import and use function in Python script as followings:
 	- target_file_name: The output file name of Tensorflow model file, in .pb.
 - ***Output***
 The output Tensorflow model file will be saved in target_fold/tensorflow_model/.
-
+<br>
 
 ### Convert pb2ckpt.
 ***
@@ -40,7 +40,7 @@ Import and use function in Python script as followings:
 	- ckpt_file_path: The file path of .ckpt model.
 - ***Output***
 The output Tensorflow model file will be saved in ckpt_file_path.
-
+<br>
 
 
 ### Check url format
@@ -61,8 +61,8 @@ Import and use function in Python script as followings:
 - ***Output***
 The string result.
 	- 'Normal' for normal url format.
-        - 'Error' for abnormal url format.
-
+	- 'Error' for abnormal url format.
+<br>
 
 
 ### Convert ip to number.
@@ -78,7 +78,7 @@ Import and use function in Python script as followings:
 	- ip_address: The ip address, eg. 127.125.5.1.
 - ***Output***
 The 32-bit number converted from ip address.
-
+<br>
 
 
 ### Python code performance.
