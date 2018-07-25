@@ -71,6 +71,7 @@ The string result.
 
 
 ### Convert ip to number.
+***
 #### Aims of this project.
 Convert ip address into 32-bit integer.
 #### Usage.
@@ -87,6 +88,7 @@ The 32-bit number converted from ip address.
 
 
 ### Python code performance.
+***
 #### Target/Motivation?
 In Python scripts, ususally some lines of code cost most of running time, and what you want to do with code performance is to find the most time-consuming part of code and to optimize the performance.
 The target of this tool is to help you find the 'evil'.
