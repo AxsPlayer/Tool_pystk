@@ -1,4 +1,7 @@
 # pystk
+[![PyPI version](https://badge.fury.io/py/pystk.svg)](https://badge.fury.io/py/pystk)
+![](https://img.shields.io/badge/license-Apache2.0-000000.svg)
+
 Small tools in toolkit to deal with piece of cakes in daily life, such as small tool to check normal url format.
 'pystk' represents for Python Small Toolkit.
 <br>
