@@ -1,6 +1,6 @@
 # pystk
 [![PyPI version](https://badge.fury.io/py/pystk.svg)](https://badge.fury.io/py/pystk)
-![](https://img.shields.io/badge/license-Apache2.0-000000.svg)
+[![codebeat badge](https://codebeat.co/badges/ba8f7af1-9f3f-4a59-ac34-58bf264facaf)](https://codebeat.co/projects/github-com-axsplayer-pystk-master)
 
 Small tools in toolkit to deal with piece of cakes in daily life, such as small tool to check normal url format.
 'pystk' represents for Python Small Toolkit.
