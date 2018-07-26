@@ -11,6 +11,24 @@ Small tools in toolkit to deal with piece of cakes in daily life, such as small 
 In daily work, there are always bunch of need for small tools to deal with tiny problems. You can search using Google and write scripts for them. However, it's also time-consuming after multiple times for one small task, for the reason you should create tools again and again. Then the toolkit is designed to alleviate this problem.
 
 ## What's the content?
+### date convertor.
+***
+#### Motivation.
+In a lot of project, the date convertion is involved in scripts. However, using current existing package `datetime` to convert date string to another date string according to target period needs to make several complex process, for example, to convert string into format of date, which is given by `datetime`. Thus, this function is designed to smooth this process, regardless of conversion between string and date type.
+#### Usage.
+Import and use function in Python script as followings:
+
+	from pystk.date_convertor import date_convert
+	date_convert(date, days)
+
+- ***Parameters***
+	- date: The date format is as followings:
+                '2018-07-10' or '20180710' or '2018/07/10'
+	- days: The period to increase or decrease by input date. Positive or negative.
+- ***Output***
+Converted date in the same format of input date.
+<br>
+
 ### Keras2tensorflow
 ***
 #### Motivation.
